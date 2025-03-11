@@ -1,24 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+         
+        }
+        </style>
 </head>
+<title>Document</title>
 <body>
-    <table style="border: 1px solid black;
-    border-collapse: collapse;">
+    <div style="display: flex;
+    justify-content: center;" ><h1>Student Application Form</h1></div>
+    <div style="display: flex;
+    justify-content: center;">
+     <table>
         <tr>
-            <th>Name</th>
-        <th>ID</th>
-        <th>Mobile</th>
+            <th>Lebel</th>
+            <th>Input</th>
+
+        </tr>
+            <td><label for="Name">Name:</label></td>
+            <td><input type="text" id="Name" name="Name"></td>
         </tr>
         <tr>
-            <td>Ainea</td>
-            <td>22-46837-1</td>
-            <td>017XXXXXXX</td>
+            <td><label for="ID Number">ID Number:</label></td>
+            <td><input type="text" id="ID Number" name="ID Number"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email" name="email"></td>
         </tr>
         
+        <tr >
+            <td><label for="Password">Password:</label></td>
+            <td><input type="password" id="Password" name="Password"></td>     
+        </tr>
+
+        <tr>
+            <td><label for="DOB">DOB:</label></td>
+            <td><input type="date" id="DOB" name="DOB"></td>
+        </tr>
+
+        <tr>
+            <td><label for="Skills">Skills:</label></td>
+            <td><input type="checkbox" id="Skills" name="c++">c++
+            <input type="checkbox" id="Skills" name="html">html</td>
+
+        </tr>
+
+        <tr>
+            <td><label for="Image">Image:</label></td>
+            <td><input type="file" id="Image" name="Image"></td>
+        </tr>
+
+        <tr>
+            <td><label for="Depertment">Depertment:</label></td>
+            <td>
+                <select id="Depertment" name="Depertment">
+                    <option >CSE</option>
+                    <option >BBA</option>
+                    <option >EEE</option> 
+                    <option >ENGLISH</option> 
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="Address">Address:</label></td>
+            <td><input type="text" id="Address" name="Address"></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>
+            <input type="submit" name="submit" value="Submit" />
+            <input type="reset" name="reset" value="Reset" />
+        </td>
+        </tr>
+   
     </table>
+    
+    </div>
+   
+   
 </body>
 </html>
