@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: rgb(185, 185, 186);
+            background-color: rgb(32, 87, 129);
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            margin-top: 10%;
+            background-color: rgb(3, 76, 83);
+            justify-items: center;
+            justify-self: center;
+            width: 70%;
+            border-radius: 10px;
+            height: 850px;
+            
+        }
+        .input_container{
+            margin-top: 20px;
+            justify-items: center;
+            justify-self: center;
+        }
+        input{
+           
+            border: none;
+            margin-top: 10px;
+            border-radius: 5px;
+            height:30px;
+            width: 350px;
+        }
+        button{
+            border: none;
+            border-radius: 5px;
+            height: 35px;
+            width: 100px;
+            margin: 20px;
+            background-color: rgb(0, 153, 204);
+            color: white;
+            cursor: pointer;
+        }
+        .action{
+            display: flex;
+            
+        }
+    </style>
+    <script>
+        function open_link(url ) {
+            window.location.href = url
+        }
+    </script>
+</head>
+<body>
+
+        <div class=" container">
+            <div class="header">
+                <h1>Student Application Form</h1>
+            </div>
+            <div class="input_container">
+              <div style="display: flex;">
+                <div style="display: grid;justify-content: center;">
+                    <label for="">First Name</label>
+                    <input type="text" placeholder="First Name">
+                </div>
+
+                <div style="display: grid;justify-content: center; margin-left: 20px;">
+                    <label for="">Last Name</label>
+                    <input type="text" placeholder="Last Name">
+                </div>
+
+              </div>
+              <div style="display: flex; margin-top: 20px;justify-self: left;">
+                <div style="display: grid;justify-content: center;">
+                    <label for="">ID </label>
+                    <input type="text" placeholder="ID">
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 20px; justify-self: left;">
+                <div style="display: grid;justify-content: center; ">
+                    <label for="">Email</label>
+                    <input type="email" placeholder="Example@Example.com">
+                </div>
+
+            
+
+              </div>
+              <div style="display: flex; margin-top: 20px; justify-self: left;">
+                <div style="display: grid;justify-content: center; ">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Password">
+                </div>
+
+            
+
+              </div>
+              <div style="display: flex; margin-top: 20px;justify-self: left;">
+                <div style="display: grid;justify-content: center;">
+                    <label for="">Date of Birth</label>
+                    <input type="date">
+                </div>
+
+              </div>
+              <div style="display: flex; margin-top: 30px;justify-self: left;">
+                <div style="display: flex;justify-content: center;">
+                    <label for="" style="margin-top: -10px; margin-right: 10px;">Skill :</label>
+                    <input type="checkbox" name="C++" style="height: 20px;width: 20px; margin-top: -10px;">
+                    <label for="" style="margin-top: -10px; margin-right: 10px;">C++</label>
+                    <input type="checkbox" name="C++" style="height: 20px;width: 20px; margin-top: -10px;">
+                    <label for="" style="margin-top: -10px; margin-right: 10px;">HTML</label>
+                </div>
+
+              </div>
+              <div style="display: flex; margin-top: 30px;justify-self: left;">
+                <div style="display: flex;justify-content: center;">
+                    <label for="" style="margin-top: -10px; margin-right: 10px;">Image :</label>
+                    <input type="file" style="margin-top: -10px;border: none; border-radius: 5px;">
+                    
+                </div>
+
+              </div>
+
+              <div style="display: flex; margin-top: 10px; justify-self: left;">
+                <div style="display: grid;justify-content: center; ">
+                    <label for="">Department</label>
+                    <select name="" id="" style="border: none;margin-top: 10px; height:30px;width: 300px; border-radius: 5px;">
+                        <option value="Male">CSE</option>
+                        <option value="female">BBA</option>
+                        <option value="female">EEE</option>
+                        <option value="female">ENGLISH</option>
+                    </select>
+                </div>
+               
+
+            
+
+              </div>
+              <div style="display: flex; margin-top: 20px;justify-self: left;">
+                <div style="display: grid;justify-content: center;">
+                    <label for="">Address </label>
+                    <input type="text" placeholder="Address" style="height: 70px;">
+                </div>
+              </div>
+
+              
+              
+
+              <button onclick="open_link('test.html')">Submit</button>
+              <button>Reset</button>
+
+              
+
+            </div>
+
+        
+        </div>
+       
+    
+   
+   
+
+</body>
+</html>

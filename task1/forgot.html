@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: rgb(185, 185, 186);
+            background-color: rgb(32, 87, 129);
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            margin-top: 10%;
+            background-color: rgb(3, 76, 83);
+            justify-items: center;
+            justify-self: center;
+            width: 30%;
+            border-radius: 10px;
+            height: 500px;
+            
+        }
+        .input_container{
+            margin-top: 100px;
+            justify-items: left;
+            justify-self: left;
+            margin-left: 35px;
+        }
+        input{
+            margin-top: -20px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            height:30px;
+            width: 350px;
+        }
+        button{
+            border: none;
+            border-radius: 5px;
+            height: 35px;
+            width: 100px;
+            margin: 20px;
+            background-color: rgb(0, 153, 204);
+            color: white;
+            cursor: pointer;
+        }
+        .action{
+            display: flex;
+            
+        }
+    </style>
+    <script>
+        function open_link(url ) {
+            window.location.href = url
+        }
+    </script>
+</head>
+<body>
+
+        <div class=" container">
+            <div class="header">
+                <h1>Account Recovery</h1>
+            </div>
+            <div class="icon">
+            </div>
+        
+            <div class="input_container">
+                <div class="email">
+                    <h3>Registered Email</h3>
+                    <input type="email" placeholder="email@example.com">
+                    </div>
+                    <div class="email">
+                        <h3>Mobile Number</h3>
+                        <input type="number" placeholder="Mobile">
+                    </div>
+            
+            </div>
+            <div class="action">
+                <button onclick="open_link('test.html')" >Send OTP</button>
+            
+            </div>
+        
+            <label>"Not a member yet? <a href="register.html" style="color: aliceblue;">Sign up now</a>"</label>
+        </div>
+       
+    
+   
+   
+
+</body>
+</html>
