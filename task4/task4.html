@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td{
+        text-align: center;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <form action="ok.html" onsubmit="return check()">
+      <fieldset style="width: 300px;">
+        <legend>Date of Birth</legend>
+
+        <table>
+          <tr>
+            <td>dd</td>
+            <td></td>
+            <td>mm</td>
+            <td></td>
+            <td>yyy</td>
+          </tr>
+          <tr  >
+            <td ><input style="height: 20px; width: 40px;text-align: center;" type="text" id="dd"></td>
+            <td style="font-size: 20px;">/</td>
+            <td><input style="height: 20px;width: 40px;text-align: center;"  type="text"id="mm"></td>
+            <td style="font-size: 20px;">/</td>
+            <td><input style="height: 20px;width: 80px;text-align: center;"  type="text"id="yyyy"></td>
+          </tr>
+        </table>
+
+        </div>
+        
+       
+      </fieldset>
+      <h3 id="msg" style="color: red;"></h3>
+      <br>
+      <input type="submit" name="submit" id="submit" value="Submit" />
+    </form>
+
+    <script>
+        function is_num(value){
+        for(let i =0 ;i<value.length ;i++){
+          if(!(value[i]>='0' && value[i]<='9')){
+            return false ;
+          }
+        }
+        return true ;
+      }
+      function show(id,txt){
+        let msg = document.getElementById(id);
+        msg.innerHTML = txt ;
+      }
+      function check(){
+        let dd = document.getElementById('dd').value;
+        let mm = document.getElementById('mm').value ;
+        let yyyy = document.getElementById('yyyy').value ;
+        if(dd==""){
+          show('msg','Date Can not be Empty');
+          return false;
+        }else if(mm==""){
+          show('msg','Month Can not be Empty');
+          return false;
+        }else if(yyyy==""){
+          show('msg','Year Can not be Empty');
+          return false;
+        }else if(is_num(dd)==false){
+            show('msg','Date Must be a Number');
+            return false;
+        }else if(is_num(mm)==false){
+            show('msg','Month Must be a Number');
+            return false;
+        }else if(is_num(yyyy)==false){
+            show('msg','Year Must be a Number');
+            return false;
+        }
+        else{
+          if(!(parseInt(dd)>=0 && parseInt(dd)<=31)){
+            show('msg','Date Out Of range');
+          return false;
+          }
+
+          if(!(parseInt(mm)>=1 && parseInt(mm)<=12)){
+            show('msg','Month Out Of range');
+          return false;
+          }
+
+          if(!(parseInt(yyyy)>=1900 && parseInt(yyyy)<=2016)){
+            show('msg','Year Out Of range');
+          return false;
+          }
+        }
+
+        
+
+      }
+    </script>
+  </body>
+</html>

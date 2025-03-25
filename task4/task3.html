@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="ok.html" onsubmit="return check()">
+      <fieldset style="width: 300px;">
+        <legend>Gender</legend>
+  
+          <input type="radio" name="gender" id="" onclick="add()">Male 
+          <input type="radio" name="gender" id="" onclick="add()">Female
+          <input type="radio" name="gender" onclick="add()">Other
+        
+       
+      </fieldset>
+      <h3 id="msg"></h3>
+      <br>
+      <input type="submit" name="submit" id="submit" value="submit" />
+    </form>
+
+    <script>
+      let cnt =0;
+      function add(){
+        cnt++;
+      }
+      function check(){
+        let msg = document.getElementById('msg');
+       // window.alert(cnt);
+        if(cnt>0){
+          return true;
+        }else{
+          msg.innerHTML ="At least one of them has to be selected";
+          msg.style.color ='red';
+          return false;
+        }
+
+      }
+    </script>
+  </body>
+</html>

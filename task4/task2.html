@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="ok.html" onsubmit="return validate()">
+      <div>Email</div>
+      <input type="text" id="name" />
+      <label
+        style="
+          border: 1px solid;
+          padding: 0.5px 8px; 
+        "
+        title="hint: sample@example.com"
+        >i</label
+      >
+      <div><h3 id="msg"></h3></div>
+      <div>
+        <input type="submit" name="submit" id="submit" value="Submit" />
+      </div>
+    </form>
+
+    <script>
+      function check(name) {
+        name = name.trim();
+        let words = name.split('@');
+        if(words.length!==2){
+            return false;
+        }
+        for(let i = 0 ;i<words.length;i++){
+            //data=data+words[i]+"\n";
+            words[i]=words[i].trim();
+            if(words[i]==""){
+                return false;
+            }
+            if(i==1){
+                for(let j =0;j<words[i].length;j++){
+                    if(words[i][j]==='.'){
+                        return true;
+                    }
+                }
+                return false;
+            }
+            
+
+        }
+    
+       // window.alert(words.length+" "+data);
+        
+      }
+      function validate() {
+        let name = document.getElementById("name").value;
+        let msg = document.getElementById("msg");
+        //msg.innerHTML = word_count(name);
+        let first = name[0];
+
+        if (name == "") {
+          msg.innerHTML = "Email Can not be Empty";
+          msg.style.color = "red";
+          return false;
+        }else if(check(name)==false){
+            msg.innerHTML = "Invalid formate <br> i.e: sample@example.com";
+            msg.style.color = "red";
+            return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>

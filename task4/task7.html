@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div{
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="ok.html" onsubmit="return check()">
+      <fieldset style="width: 600px;">
+        <legend>Date of Birth</legend>
+        <div>User ID <input type="text" id='user_id';></div>
+        <div>Picture <input type="file" id ='pic'></div>
+        <h3 id="msg" style="color: red;"></h3>
+      <hr>
+      <input type="submit" name="submit" id="submit" value="Submit" />
+       
+      </fieldset>
+      
+    </form>
+
+    <script>
+      function is_num(value){
+        for(let i =0 ;i<value.length ;i++){
+          if(!(value[i]>='0' && value[i]<='9')){
+            return false ;
+          }
+        }
+        return true ;
+      }
+      function show(id,txt){
+        let msg = document.getElementById(id);
+        msg.innerHTML = txt ;
+      }
+       function check(){
+        let user_id = document.getElementById('user_id').value;
+        let pic = document.getElementById('pic').value ;
+        if(!(user_id!=="")){
+          show('msg',"User ID Can not be Empty ");
+          return false;
+        }else if(is_num(user_id)==false){
+          show('msg',"User Id Must be a number") ;
+          return false;
+        }
+        else if(!(parseInt(user_id)>=0)){
+          show('msg',"User ID Can not negative ")
+          return false;
+        }
+        else if(pic==""){
+          show('msg',"Picture Can not be Empty");
+          return false ;
+        }
+       }
+    </script>
+  </body>
+</html>

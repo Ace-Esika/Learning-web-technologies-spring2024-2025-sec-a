@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div{
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="ok.html" onsubmit="return check()">
+      <div style="width: 400px;">
+        Blood Group
+        <select name="" id="blood_group">
+          <option value=""></option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+        <h3 id="msg" style="color: red;"></h3>
+        <hr>
+        <input type="submit" name="submit" id="submit" value="Submit" />
+        
+      </div>
+      
+      
+    </form>
+
+    <script>
+
+      function show(id,txt){
+        let msg = document.getElementById(id);
+        msg.innerHTML = txt ;
+      }
+       function check(){
+        let val = document.getElementById('blood_group').value;
+        if(val==""){
+          show('msg',"Blood Group Can not be empty");
+          return false;
+        }
+       }
+    </script>
+  </body>
+</html>
